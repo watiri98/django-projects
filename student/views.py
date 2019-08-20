@@ -17,8 +17,7 @@ def add_student(request):
 
 def list_students(request):
     students = Student.objects.all()
-    courses = student.courses.all()
-    return render(request,"all_students.html",{"students":students},{"courses":courses})
+    return render(request,"all_students.html",{"students":students})
 
 def student_details(request,pk):
     student = Student.objects.get(pk = pk);
