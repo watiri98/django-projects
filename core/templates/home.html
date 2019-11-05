@@ -1,21 +1,68 @@
-<!DOCTYPE html>
+<html>
 <head>
-	<title>Registration</title>
-
+    <title>Registration</title>
 </head>
+<!-- <header class="header">
+ <div class="header-text">Sign in via:</div>
+ <a href="#" class="header-link">Spotify</a>
+ <a href="#" class="header-link">Deezer</a>
+</header> -->
+<style >
+    body {
+        background-color: black;
+        margin: 0 auto;
+        /float: right;/
+        font-style: Helventica;
+        font-weight: bold;
+        font-style: white;
+        text-decoration-color: white;
+        color:white;
+        
+    }
+     a{
+          background-color: blue;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+    }
+    h1{
+        color: grey;
+        float: center;
+        text-align: center;
+        font-size: 25px;
+        font-size: 40px;
+    }
+p{
+        float:center;
+        text-align: center;
+        font-size: 25px;
+}
+</style>
 <body>
-	{% if user.is_aunthenticated %}
-		Welcome {{user.username}}
-		Add a student
-		<a href = "/student/add/">Here</a>
-		or
-		logout <a href="/accounts/logout/">Here</a>
-	{% else %}
-		Hello guest
-		You can log in
-		<a href="/accounts/login">Here</a>
-		or 
-		Create an account <a href="accounts/register/">Here</a>
-	{% endif %}
+    <section class="landing-section landing-main">
+ <h1>Hello Guest</h1>
+<p>You can log in </p>
+<p><a href="/accounts/login/"> Here </a></p>
+<p>Add a student</p>
+<p><a href = "/student/add/">Here</a></p>
+ <!-- <p>or</p> -->
+<p>Create an account</p>
+<p><a href="/accounts/register"> Here </a></p>
+<p> You are not logged in</p>
+</section>
+<!-- {% if user.is_autheticated %}
+    <h1>welcome{{user.username}}</h1>
+    <p>Add a student</p>
+    <a href="/student/add/">Here </a>
+    or
+    Log out <a href="/accounts/logout/"> Here </a>
+<p> You are logged in</p>
+{% else %}
+{% endif %} -->
+</div>
 </body>
 </html>

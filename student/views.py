@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
+from django.http import HttpResponse
 
 
 from .forms import StudentForm
@@ -11,6 +12,9 @@ def add_student(request):
         if form.is_valid():
             form.save()
             return redirect("list_students")
+        else:
+            return HttpResponse("invalid data",status = 400)
+
     else:
         form = StudentForm()
     return render(request,"add_student.html",{"form":form})
