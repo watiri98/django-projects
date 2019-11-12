@@ -131,4 +131,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR , 'student/media')
 LOGIN_REDIRECT_URL = '/'
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
